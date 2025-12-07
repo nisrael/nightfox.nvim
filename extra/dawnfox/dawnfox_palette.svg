@@ -1,0 +1,877 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 793.70079 1122.5197"
+   width="210mm"
+   height="297mm"
+   version="1.1"
+   id="svg134"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <style
+     id="style1">
+        .swatch {
+        stroke: #faf4ed;
+        stroke-width: 2;
+        }
+
+        .label {
+        font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        font-size: 12px;
+        fill: #575279;
+        }
+
+        .title {
+        font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        font-size: 24px;
+        font-weight: bold;
+        fill: #e5e9f0;
+        }
+
+        .section-title {
+        font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        font-size: 16px;
+        font-weight: bold;
+        fill: #286983;
+        }
+
+        .hex-label {
+        font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        font-size: 10px;
+        fill: #625c87;
+        }
+    </style>
+  <!-- Background -->
+  <rect
+     width="793.70081"
+     height="1122.4052"
+     fill="#faf4ed"
+     id="rect30"
+     x="0"
+     y="0"
+     style="stroke-width:0.5669" />
+  <!-- Title -->
+  <text
+     x="396.68597"
+     y="32.068718"
+     text-anchor="middle"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="19.2412px"
+     font-weight="bold"
+     fill="#4c4769"
+     id="text30"
+     style="text-align:center;text-anchor:middle;stroke-width:0.801718">Dawnfox Color Palette</text>
+  <!-- Main Colors Section -->
+  <text
+     x="40.085899"
+     y="64.137436"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="12.8275px"
+     font-weight="bold"
+     fill="#4c4769"
+     id="text31"
+     style="stroke-width:0.801718">Main Colors (Base | Bright | Dim)</text>
+  <!-- Black -->
+  <rect
+     x="40.085899"
+     y="80.171799"
+     width="64.137436"
+     height="64.137436"
+     fill="#575279"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect31" />
+  <rect
+     x="112.24052"
+     y="80.171799"
+     width="64.137436"
+     height="64.137436"
+     fill="#5f5695"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect32" />
+  <rect
+     x="184.39513"
+     y="80.171799"
+     width="64.137436"
+     height="64.137436"
+     fill="#504c6b"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect33" />
+  <text
+     x="40.085899"
+     y="156.33501"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="#575279"
+     id="text33"
+     style="stroke-width:0.801718">Black</text>
+  <text
+     x="40.085899"
+     y="168.36078"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="#625c87"
+     id="text34"
+     style="stroke-width:0.801718">#575279 | #5f5695 | #504c6b</text>
+  <!-- Red -->
+  <rect
+     x="280.60129"
+     y="80.171799"
+     width="64.137436"
+     height="64.137436"
+     fill="#b4637a"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect34" />
+  <rect
+     x="352.75592"
+     y="80.171799"
+     width="64.137436"
+     height="64.137436"
+     fill="#c26d85"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect35" />
+  <rect
+     x="424.91052"
+     y="80.171799"
+     width="64.137436"
+     height="64.137436"
+     fill="#a5576d"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect36" />
+  <text
+     x="280.60129"
+     y="156.33501"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="#575279"
+     id="text36"
+     style="stroke-width:0.801718">Red</text>
+  <text
+     x="280.60129"
+     y="168.36078"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="#625c87"
+     id="text37"
+     style="stroke-width:0.801718">#b4637a | #c26d85 | #a5576d</text>
+  <!-- Green -->
+  <rect
+     x="521.1167"
+     y="80.171799"
+     width="64.137436"
+     height="64.137436"
+     fill="#618774"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect37" />
+  <rect
+     x="593.2713"
+     y="80.171799"
+     width="64.137436"
+     height="64.137436"
+     fill="#629f81"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect38" />
+  <rect
+     x="665.4259"
+     y="80.171799"
+     width="64.137436"
+     height="64.137436"
+     fill="#597668"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect39" />
+  <text
+     x="521.1167"
+     y="156.33501"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="#575279"
+     id="text39"
+     style="stroke-width:0.801718">Green</text>
+  <text
+     x="521.1167"
+     y="168.36078"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="#625c87"
+     id="text40"
+     style="stroke-width:0.801718">#618774 | #629f81 | #597668</text>
+  <!-- Yellow -->
+  <rect
+     x="40.085899"
+     y="192.41231"
+     width="64.137436"
+     height="64.137436"
+     fill="#ea9d34"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect40" />
+  <rect
+     x="112.24052"
+     y="192.41231"
+     width="64.137436"
+     height="64.137436"
+     fill="#eea846"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect41" />
+  <rect
+     x="184.39513"
+     y="192.41231"
+     width="64.137436"
+     height="64.137436"
+     fill="#dd9024"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect42" />
+  <text
+     x="40.085899"
+     y="268.57553"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="#575279"
+     id="text42"
+     style="stroke-width:0.801718">Yellow</text>
+  <text
+     x="40.085899"
+     y="280.60129"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="#625c87"
+     id="text43"
+     style="stroke-width:0.801718">#ea9d34 | #eea846 | #dd9024</text>
+  <!-- Blue -->
+  <rect
+     x="280.60129"
+     y="192.41231"
+     width="64.137436"
+     height="64.137436"
+     fill="#286983"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect43" />
+  <rect
+     x="352.75592"
+     y="192.41231"
+     width="64.137436"
+     height="64.137436"
+     fill="#2d81a3"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect44" />
+  <rect
+     x="424.91052"
+     y="192.41231"
+     width="64.137436"
+     height="64.137436"
+     fill="#295e73"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect45" />
+  <text
+     x="280.60129"
+     y="268.57553"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="#575279"
+     id="text45"
+     style="stroke-width:0.801718">Blue</text>
+  <text
+     x="280.60129"
+     y="280.60129"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="#625c87"
+     id="text46"
+     style="stroke-width:0.801718">#286983 | #2d81a3 | #295e73</text>
+  <!-- Magenta -->
+  <rect
+     x="521.1167"
+     y="192.41231"
+     width="64.137436"
+     height="64.137436"
+     fill="#907aa9"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect46" />
+  <rect
+     x="593.2713"
+     y="192.41231"
+     width="64.137436"
+     height="64.137436"
+     fill="#9a80b9"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect47" />
+  <rect
+     x="665.4259"
+     y="192.41231"
+     width="64.137436"
+     height="64.137436"
+     fill="#816b9a"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect48" />
+  <text
+     x="521.1167"
+     y="268.57553"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="#575279"
+     id="text48"
+     style="stroke-width:0.801718">Magenta</text>
+  <text
+     x="521.1167"
+     y="280.60129"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="#625c87"
+     id="text49"
+     style="stroke-width:0.801718">#907aa9 | #9a80b9 | #816b9a</text>
+  <!-- Cyan -->
+  <rect
+     x="40.085899"
+     y="304.65283"
+     width="64.137436"
+     height="64.137436"
+     fill="#56949f"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect49" />
+  <rect
+     x="112.24052"
+     y="304.65283"
+     width="64.137436"
+     height="64.137436"
+     fill="#5ca7b4"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect50" />
+  <rect
+     x="184.39513"
+     y="304.65283"
+     width="64.137436"
+     height="64.137436"
+     fill="#50848c"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect51" />
+  <text
+     x="40.085899"
+     y="380.81604"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="#575279"
+     id="text51"
+     style="stroke-width:0.801718">Cyan</text>
+  <text
+     x="40.085899"
+     y="392.8418"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="#625c87"
+     id="text52"
+     style="stroke-width:0.801718">#56949f | #5ca7b4 | #50848c</text>
+  <!-- White -->
+  <rect
+     x="280.60129"
+     y="304.65283"
+     width="64.137436"
+     height="64.137436"
+     fill="#e5e9f0"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect52" />
+  <rect
+     x="352.75592"
+     y="304.65283"
+     width="64.137436"
+     height="64.137436"
+     fill="#e6ebf3"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect53" />
+  <rect
+     x="424.91052"
+     y="304.65283"
+     width="64.137436"
+     height="64.137436"
+     fill="#c8cfde"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect54" />
+  <text
+     x="280.60129"
+     y="380.81604"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="#575279"
+     id="text54"
+     style="stroke-width:0.801718">White</text>
+  <text
+     x="280.60129"
+     y="392.8418"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="#625c87"
+     id="text55"
+     style="stroke-width:0.801718">#e5e9f0 | #e6ebf3 | #c8cfde</text>
+  <!-- Orange -->
+  <rect
+     x="521.1167"
+     y="304.65283"
+     width="64.137436"
+     height="64.137436"
+     fill="#d7827e"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect55" />
+  <rect
+     x="593.2713"
+     y="304.65283"
+     width="64.137436"
+     height="64.137436"
+     fill="#de8c88"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect56" />
+  <rect
+     x="665.4259"
+     y="304.65283"
+     width="64.137436"
+     height="64.137436"
+     fill="#ca6e69"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect57" />
+  <text
+     x="521.1167"
+     y="380.81604"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="#575279"
+     id="text57"
+     style="stroke-width:0.801718">Orange</text>
+  <text
+     x="521.1167"
+     y="392.8418"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="#625c87"
+     id="text58"
+     style="stroke-width:0.801718">#d7827e | #de8c88 | #ca6e69</text>
+  <!-- Pink -->
+  <rect
+     x="40.085899"
+     y="416.89334"
+     width="64.137436"
+     height="64.137436"
+     fill="#d685af"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect58" />
+  <rect
+     x="112.24052"
+     y="416.89334"
+     width="64.137436"
+     height="64.137436"
+     fill="#de8db7"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect59" />
+  <rect
+     x="184.39513"
+     y="416.89334"
+     width="64.137436"
+     height="64.137436"
+     fill="#c9709e"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect60" />
+  <text
+     x="40.085899"
+     y="493.05655"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="#575279"
+     id="text60"
+     style="stroke-width:0.801718">Pink</text>
+  <text
+     x="40.085899"
+     y="505.08231"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="#625c87"
+     id="text61"
+     style="stroke-width:0.801718">#d685af | #de8db7 | #c9709e</text>
+  <!-- Special Colors Section -->
+  <text
+     x="40.085899"
+     y="545.16821"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="12.8275px"
+     font-weight="bold"
+     fill="#4c4769"
+     id="text62"
+     style="stroke-width:0.801718">Special Colors</text>
+  <!-- Comment -->
+  <rect
+     x="40.085899"
+     y="561.20258"
+     width="96.206154"
+     height="48.103077"
+     fill="#9893a5"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect62" />
+  <text
+     x="40.085899"
+     y="621.33142"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="#575279"
+     id="text63"
+     style="stroke-width:0.801718">Comment</text>
+  <text
+     x="40.085899"
+     y="633.35718"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="#625c87"
+     id="text64"
+     style="stroke-width:0.801718">#9893a5</text>
+  <!-- Background Colors Section -->
+  <text
+     x="40.085899"
+     y="673.44312"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="12.8275px"
+     font-weight="bold"
+     fill="#4c4769"
+     id="text65"
+     style="stroke-width:0.801718">Background Colors</text>
+  <!-- BG0-4 -->
+  <rect
+     x="40.085899"
+     y="689.47748"
+     width="80.171799"
+     height="48.103077"
+     fill="#ebe5df"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect65" />
+  <text
+     x="40.085899"
+     y="749.60632"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="#575279"
+     id="text66"
+     style="stroke-width:0.801718">BG0 (Dark)</text>
+  <text
+     x="40.085899"
+     y="761.63208"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="#625c87"
+     id="text67"
+     style="stroke-width:0.801718">#ebe5df</text>
+  <rect
+     x="144.30923"
+     y="689.47748"
+     width="80.171799"
+     height="48.103077"
+     fill="#faf4ed"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect67" />
+  <text
+     x="144.30923"
+     y="749.60632"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="#575279"
+     id="text68"
+     style="stroke-width:0.801718">BG1 (Default)</text>
+  <text
+     x="144.30923"
+     y="761.63208"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="#625c87"
+     id="text69"
+     style="stroke-width:0.801718">#faf4ed</text>
+  <rect
+     x="248.53256"
+     y="689.47748"
+     width="80.171799"
+     height="48.103077"
+     fill="#ebe0df"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect69" />
+  <text
+     x="248.53256"
+     y="749.60632"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="#575279"
+     id="text70"
+     style="stroke-width:0.801718">BG2 (Lighter)</text>
+  <text
+     x="248.53256"
+     y="761.63208"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="#625c87"
+     id="text71"
+     style="stroke-width:0.801718">#ebe0df</text>
+  <rect
+     x="352.75592"
+     y="689.47748"
+     width="80.171799"
+     height="48.103077"
+     fill="#ebdfe4"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect71" />
+  <text
+     x="352.75592"
+     y="749.60632"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="#575279"
+     id="text72"
+     style="stroke-width:0.801718">BG3 (Lighter)</text>
+  <text
+     x="352.75592"
+     y="761.63208"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="#625c87"
+     id="text73"
+     style="stroke-width:0.801718">#ebdfe4</text>
+  <rect
+     x="456.97925"
+     y="689.47748"
+     width="80.171799"
+     height="48.103077"
+     fill="#bdbfc9"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect73" />
+  <text
+     x="456.97925"
+     y="749.60632"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="#575279"
+     id="text74"
+     style="stroke-width:0.801718">BG4 (Border)</text>
+  <text
+     x="456.97925"
+     y="761.63208"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="#625c87"
+     id="text75"
+     style="stroke-width:0.801718">#bdbfc9</text>
+  <!-- Foreground Colors Section -->
+  <text
+     x="40.085899"
+     y="801.71796"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="12.8275px"
+     font-weight="bold"
+     fill="#4c4769"
+     id="text76"
+     style="stroke-width:0.801718">Foreground Colors</text>
+  <!-- FG0-3 -->
+  <rect
+     x="40.085899"
+     y="817.75232"
+     width="80.171799"
+     height="48.103077"
+     fill="#4c4769"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect76" />
+  <text
+     x="40.085899"
+     y="877.88116"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="#575279"
+     id="text77"
+     style="stroke-width:0.801718">FG0 (Lighter)</text>
+  <text
+     x="40.085899"
+     y="889.90692"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="#625c87"
+     id="text78"
+     style="stroke-width:0.801718">#4c4769</text>
+  <rect
+     x="144.30923"
+     y="817.75232"
+     width="80.171799"
+     height="48.103077"
+     fill="#575279"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect78" />
+  <text
+     x="144.30923"
+     y="877.88116"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="#575279"
+     id="text79"
+     style="stroke-width:0.801718">FG1 (Default)</text>
+  <text
+     x="144.30923"
+     y="889.90692"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="#625c87"
+     id="text80"
+     style="stroke-width:0.801718">#575279</text>
+  <rect
+     x="248.53256"
+     y="817.75232"
+     width="80.171799"
+     height="48.103077"
+     fill="#625c87"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect80" />
+  <text
+     x="248.53256"
+     y="877.88116"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="#575279"
+     id="text81"
+     style="stroke-width:0.801718">FG2 (Darker)</text>
+  <text
+     x="248.53256"
+     y="889.90692"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="#625c87"
+     id="text82"
+     style="stroke-width:0.801718">#625c87</text>
+  <rect
+     x="352.75592"
+     y="817.75232"
+     width="80.171799"
+     height="48.103077"
+     fill="#a8a3b3"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect82" />
+  <text
+     x="352.75592"
+     y="877.88116"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="#575279"
+     id="text83"
+     style="stroke-width:0.801718">FG3 (Darker)</text>
+  <text
+     x="352.75592"
+     y="889.90692"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="#625c87"
+     id="text84"
+     style="stroke-width:0.801718">#a8a3b3</text>
+  <!-- Selection Colors Section -->
+  <text
+     x="40.085899"
+     y="929.99286"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="12.8275px"
+     font-weight="bold"
+     fill="#4c4769"
+     id="text85"
+     style="stroke-width:0.801718">Selection Colors</text>
+  <!-- SEL0-1 -->
+  <rect
+     x="40.085899"
+     y="946.02722"
+     width="96.206154"
+     height="48.103077"
+     fill="#d0d8d8"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect85" />
+  <text
+     x="40.085899"
+     y="1006.1561"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="#575279"
+     id="text86"
+     style="stroke-width:0.801718">SEL0 (Popup BG)</text>
+  <text
+     x="40.085899"
+     y="1018.1818"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="#625c87"
+     id="text87"
+     style="stroke-width:0.801718">#d0d8d8</text>
+  <rect
+     x="160.3436"
+     y="946.02722"
+     width="96.206154"
+     height="48.103077"
+     fill="#b8cece"
+     stroke="#faf4ed"
+     stroke-width="1.60344"
+     id="rect87" />
+  <text
+     x="160.3436"
+     y="1006.1561"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="#575279"
+     id="text88"
+     style="stroke-width:0.801718">SEL1 (Search BG)</text>
+  <text
+     x="160.3436"
+     y="1018.1818"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="#625c87"
+     id="text89"
+     style="stroke-width:0.801718">#b8cece</text>
+  <!-- Usage Legend -->
+  <text
+     x="40.085899"
+     y="1066.2849"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="12.8275px"
+     font-weight="bold"
+     fill="#4c4769"
+     id="text90"
+     style="stroke-width:0.801718">Usage Notes</text>
+  <text
+     x="40.085899"
+     y="1086.3279"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="#625c87"
+     id="text91"
+     style="stroke-width:0.801718">• Each main color has 3 shades: Base (middle), Bright (lighter), Dim (darker)</text>
+</svg>
