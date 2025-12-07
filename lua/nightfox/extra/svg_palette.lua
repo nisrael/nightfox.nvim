@@ -1,0 +1,900 @@
+local template = require("nightfox.util.template")
+
+local M = {}
+
+function M.generate(spec, _)
+  local pal = spec.palette
+  local name = pal.meta.name
+  spec.title = name:sub(1, 1):upper() .. name:sub(2) .. " Color Palette"
+
+  -- Helper function to extract hex value from Shade objects
+  local function hex(color)
+    if type(color) == "table" and color.base then
+      return color.base
+    end
+    return color
+  end
+
+  local content = [===[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 793.70079 1122.5197"
+   width="210mm"
+   height="297mm"
+   version="1.1"
+   id="svg134"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <style
+     id="style1">
+        .swatch {
+        stroke: ${bg1};
+        stroke-width: 2;
+        }
+
+        .label {
+        font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        font-size: 12px;
+        fill: ${fg1};
+        }
+
+        .title {
+        font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        font-size: 24px;
+        font-weight: bold;
+        fill: ${palette.white.base};
+        }
+
+        .section-title {
+        font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        font-size: 16px;
+        font-weight: bold;
+        fill: ${palette.blue.base};
+        }
+
+        .hex-label {
+        font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        font-size: 10px;
+        fill: ${fg2};
+        }
+    </style>
+  <!-- Background -->
+  <rect
+     width="793.70081"
+     height="1122.4052"
+     fill="${bg1}"
+     id="rect30"
+     x="0"
+     y="0"
+     style="stroke-width:0.5669" />
+  <!-- Title -->
+  <text
+     x="396.68597"
+     y="32.068718"
+     text-anchor="middle"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="19.2412px"
+     font-weight="bold"
+     fill="${fg0}"
+     id="text30"
+     style="text-align:center;text-anchor:middle;stroke-width:0.801718">${title}</text>
+  <!-- Main Colors Section -->
+  <text
+     x="40.085899"
+     y="64.137436"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="12.8275px"
+     font-weight="bold"
+     fill="${fg0}"
+     id="text31"
+     style="stroke-width:0.801718">Main Colors (Base | Bright | Dim)</text>
+  <!-- Black -->
+  <rect
+     x="40.085899"
+     y="80.171799"
+     width="64.137436"
+     height="64.137436"
+     fill="${palette.black.base}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect31" />
+  <rect
+     x="112.24052"
+     y="80.171799"
+     width="64.137436"
+     height="64.137436"
+     fill="${palette.black.bright}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect32" />
+  <rect
+     x="184.39513"
+     y="80.171799"
+     width="64.137436"
+     height="64.137436"
+     fill="${palette.black.dim}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect33" />
+  <text
+     x="40.085899"
+     y="156.33501"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="${fg1}"
+     id="text33"
+     style="stroke-width:0.801718">Black</text>
+  <text
+     x="40.085899"
+     y="168.36078"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="${fg2}"
+     id="text34"
+     style="stroke-width:0.801718">${palette.black.base} | ${palette.black.bright} | ${palette.black.dim}</text>
+  <!-- Red -->
+  <rect
+     x="280.60129"
+     y="80.171799"
+     width="64.137436"
+     height="64.137436"
+     fill="${palette.red.base}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect34" />
+  <rect
+     x="352.75592"
+     y="80.171799"
+     width="64.137436"
+     height="64.137436"
+     fill="${palette.red.bright}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect35" />
+  <rect
+     x="424.91052"
+     y="80.171799"
+     width="64.137436"
+     height="64.137436"
+     fill="${palette.red.dim}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect36" />
+  <text
+     x="280.60129"
+     y="156.33501"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="${fg1}"
+     id="text36"
+     style="stroke-width:0.801718">Red</text>
+  <text
+     x="280.60129"
+     y="168.36078"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="${fg2}"
+     id="text37"
+     style="stroke-width:0.801718">${palette.red.base} | ${palette.red.bright} | ${palette.red.dim}</text>
+  <!-- Green -->
+  <rect
+     x="521.1167"
+     y="80.171799"
+     width="64.137436"
+     height="64.137436"
+     fill="${palette.green.base}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect37" />
+  <rect
+     x="593.2713"
+     y="80.171799"
+     width="64.137436"
+     height="64.137436"
+     fill="${palette.green.bright}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect38" />
+  <rect
+     x="665.4259"
+     y="80.171799"
+     width="64.137436"
+     height="64.137436"
+     fill="${palette.green.dim}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect39" />
+  <text
+     x="521.1167"
+     y="156.33501"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="${fg1}"
+     id="text39"
+     style="stroke-width:0.801718">Green</text>
+  <text
+     x="521.1167"
+     y="168.36078"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="${fg2}"
+     id="text40"
+     style="stroke-width:0.801718">${palette.green.base} | ${palette.green.bright} | ${palette.green.dim}</text>
+  <!-- Yellow -->
+  <rect
+     x="40.085899"
+     y="192.41231"
+     width="64.137436"
+     height="64.137436"
+     fill="${palette.yellow.base}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect40" />
+  <rect
+     x="112.24052"
+     y="192.41231"
+     width="64.137436"
+     height="64.137436"
+     fill="${palette.yellow.bright}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect41" />
+  <rect
+     x="184.39513"
+     y="192.41231"
+     width="64.137436"
+     height="64.137436"
+     fill="${palette.yellow.dim}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect42" />
+  <text
+     x="40.085899"
+     y="268.57553"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="${fg1}"
+     id="text42"
+     style="stroke-width:0.801718">Yellow</text>
+  <text
+     x="40.085899"
+     y="280.60129"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="${fg2}"
+     id="text43"
+     style="stroke-width:0.801718">${palette.yellow.base} | ${palette.yellow.bright} | ${palette.yellow.dim}</text>
+  <!-- Blue -->
+  <rect
+     x="280.60129"
+     y="192.41231"
+     width="64.137436"
+     height="64.137436"
+     fill="${palette.blue.base}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect43" />
+  <rect
+     x="352.75592"
+     y="192.41231"
+     width="64.137436"
+     height="64.137436"
+     fill="${palette.blue.bright}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect44" />
+  <rect
+     x="424.91052"
+     y="192.41231"
+     width="64.137436"
+     height="64.137436"
+     fill="${palette.blue.dim}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect45" />
+  <text
+     x="280.60129"
+     y="268.57553"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="${fg1}"
+     id="text45"
+     style="stroke-width:0.801718">Blue</text>
+  <text
+     x="280.60129"
+     y="280.60129"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="${fg2}"
+     id="text46"
+     style="stroke-width:0.801718">${palette.blue.base} | ${palette.blue.bright} | ${palette.blue.dim}</text>
+  <!-- Magenta -->
+  <rect
+     x="521.1167"
+     y="192.41231"
+     width="64.137436"
+     height="64.137436"
+     fill="${palette.magenta.base}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect46" />
+  <rect
+     x="593.2713"
+     y="192.41231"
+     width="64.137436"
+     height="64.137436"
+     fill="${palette.magenta.bright}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect47" />
+  <rect
+     x="665.4259"
+     y="192.41231"
+     width="64.137436"
+     height="64.137436"
+     fill="${palette.magenta.dim}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect48" />
+  <text
+     x="521.1167"
+     y="268.57553"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="${fg1}"
+     id="text48"
+     style="stroke-width:0.801718">Magenta</text>
+  <text
+     x="521.1167"
+     y="280.60129"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="${fg2}"
+     id="text49"
+     style="stroke-width:0.801718">${palette.magenta.base} | ${palette.magenta.bright} | ${palette.magenta.dim}</text>
+  <!-- Cyan -->
+  <rect
+     x="40.085899"
+     y="304.65283"
+     width="64.137436"
+     height="64.137436"
+     fill="${palette.cyan.base}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect49" />
+  <rect
+     x="112.24052"
+     y="304.65283"
+     width="64.137436"
+     height="64.137436"
+     fill="${palette.cyan.bright}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect50" />
+  <rect
+     x="184.39513"
+     y="304.65283"
+     width="64.137436"
+     height="64.137436"
+     fill="${palette.cyan.dim}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect51" />
+  <text
+     x="40.085899"
+     y="380.81604"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="${fg1}"
+     id="text51"
+     style="stroke-width:0.801718">Cyan</text>
+  <text
+     x="40.085899"
+     y="392.8418"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="${fg2}"
+     id="text52"
+     style="stroke-width:0.801718">${palette.cyan.base} | ${palette.cyan.bright} | ${palette.cyan.dim}</text>
+  <!-- White -->
+  <rect
+     x="280.60129"
+     y="304.65283"
+     width="64.137436"
+     height="64.137436"
+     fill="${palette.white.base}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect52" />
+  <rect
+     x="352.75592"
+     y="304.65283"
+     width="64.137436"
+     height="64.137436"
+     fill="${palette.white.bright}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect53" />
+  <rect
+     x="424.91052"
+     y="304.65283"
+     width="64.137436"
+     height="64.137436"
+     fill="${palette.white.dim}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect54" />
+  <text
+     x="280.60129"
+     y="380.81604"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="${fg1}"
+     id="text54"
+     style="stroke-width:0.801718">White</text>
+  <text
+     x="280.60129"
+     y="392.8418"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="${fg2}"
+     id="text55"
+     style="stroke-width:0.801718">${palette.white.base} | ${palette.white.bright} | ${palette.white.dim}</text>
+  <!-- Orange -->
+  <rect
+     x="521.1167"
+     y="304.65283"
+     width="64.137436"
+     height="64.137436"
+     fill="${palette.orange.base}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect55" />
+  <rect
+     x="593.2713"
+     y="304.65283"
+     width="64.137436"
+     height="64.137436"
+     fill="${palette.orange.bright}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect56" />
+  <rect
+     x="665.4259"
+     y="304.65283"
+     width="64.137436"
+     height="64.137436"
+     fill="${palette.orange.dim}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect57" />
+  <text
+     x="521.1167"
+     y="380.81604"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="${fg1}"
+     id="text57"
+     style="stroke-width:0.801718">Orange</text>
+  <text
+     x="521.1167"
+     y="392.8418"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="${fg2}"
+     id="text58"
+     style="stroke-width:0.801718">${palette.orange.base} | ${palette.orange.bright} | ${palette.orange.dim}</text>
+  <!-- Pink -->
+  <rect
+     x="40.085899"
+     y="416.89334"
+     width="64.137436"
+     height="64.137436"
+     fill="${palette.pink.base}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect58" />
+  <rect
+     x="112.24052"
+     y="416.89334"
+     width="64.137436"
+     height="64.137436"
+     fill="${palette.pink.bright}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect59" />
+  <rect
+     x="184.39513"
+     y="416.89334"
+     width="64.137436"
+     height="64.137436"
+     fill="${palette.pink.dim}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect60" />
+  <text
+     x="40.085899"
+     y="493.05655"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="${fg1}"
+     id="text60"
+     style="stroke-width:0.801718">Pink</text>
+  <text
+     x="40.085899"
+     y="505.08231"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="${fg2}"
+     id="text61"
+     style="stroke-width:0.801718">${palette.pink.base} | ${palette.pink.bright} | ${palette.pink.dim}</text>
+  <!-- Special Colors Section -->
+  <text
+     x="40.085899"
+     y="545.16821"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="12.8275px"
+     font-weight="bold"
+     fill="${fg0}"
+     id="text62"
+     style="stroke-width:0.801718">Special Colors</text>
+  <!-- Comment -->
+  <rect
+     x="40.085899"
+     y="561.20258"
+     width="96.206154"
+     height="48.103077"
+     fill="${palette.comment}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect62" />
+  <text
+     x="40.085899"
+     y="621.33142"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="${fg1}"
+     id="text63"
+     style="stroke-width:0.801718">Comment</text>
+  <text
+     x="40.085899"
+     y="633.35718"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="${fg2}"
+     id="text64"
+     style="stroke-width:0.801718">${palette.comment}</text>
+  <!-- Background Colors Section -->
+  <text
+     x="40.085899"
+     y="673.44312"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="12.8275px"
+     font-weight="bold"
+     fill="${fg0}"
+     id="text65"
+     style="stroke-width:0.801718">Background Colors</text>
+  <!-- BG0-4 -->
+  <rect
+     x="40.085899"
+     y="689.47748"
+     width="80.171799"
+     height="48.103077"
+     fill="${bg0}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect65" />
+  <text
+     x="40.085899"
+     y="749.60632"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="${fg1}"
+     id="text66"
+     style="stroke-width:0.801718">BG0 (Dark)</text>
+  <text
+     x="40.085899"
+     y="761.63208"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="${fg2}"
+     id="text67"
+     style="stroke-width:0.801718">${bg0}</text>
+  <rect
+     x="144.30923"
+     y="689.47748"
+     width="80.171799"
+     height="48.103077"
+     fill="${bg1}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect67" />
+  <text
+     x="144.30923"
+     y="749.60632"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="${fg1}"
+     id="text68"
+     style="stroke-width:0.801718">BG1 (Default)</text>
+  <text
+     x="144.30923"
+     y="761.63208"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="${fg2}"
+     id="text69"
+     style="stroke-width:0.801718">${bg1}</text>
+  <rect
+     x="248.53256"
+     y="689.47748"
+     width="80.171799"
+     height="48.103077"
+     fill="${bg2}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect69" />
+  <text
+     x="248.53256"
+     y="749.60632"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="${fg1}"
+     id="text70"
+     style="stroke-width:0.801718">BG2 (Lighter)</text>
+  <text
+     x="248.53256"
+     y="761.63208"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="${fg2}"
+     id="text71"
+     style="stroke-width:0.801718">${bg2}</text>
+  <rect
+     x="352.75592"
+     y="689.47748"
+     width="80.171799"
+     height="48.103077"
+     fill="${bg3}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect71" />
+  <text
+     x="352.75592"
+     y="749.60632"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="${fg1}"
+     id="text72"
+     style="stroke-width:0.801718">BG3 (Lighter)</text>
+  <text
+     x="352.75592"
+     y="761.63208"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="${fg2}"
+     id="text73"
+     style="stroke-width:0.801718">${bg3}</text>
+  <rect
+     x="456.97925"
+     y="689.47748"
+     width="80.171799"
+     height="48.103077"
+     fill="${bg4}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect73" />
+  <text
+     x="456.97925"
+     y="749.60632"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="${fg1}"
+     id="text74"
+     style="stroke-width:0.801718">BG4 (Border)</text>
+  <text
+     x="456.97925"
+     y="761.63208"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="${fg2}"
+     id="text75"
+     style="stroke-width:0.801718">${bg4}</text>
+  <!-- Foreground Colors Section -->
+  <text
+     x="40.085899"
+     y="801.71796"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="12.8275px"
+     font-weight="bold"
+     fill="${fg0}"
+     id="text76"
+     style="stroke-width:0.801718">Foreground Colors</text>
+  <!-- FG0-3 -->
+  <rect
+     x="40.085899"
+     y="817.75232"
+     width="80.171799"
+     height="48.103077"
+     fill="${fg0}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect76" />
+  <text
+     x="40.085899"
+     y="877.88116"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="${fg1}"
+     id="text77"
+     style="stroke-width:0.801718">FG0 (Lighter)</text>
+  <text
+     x="40.085899"
+     y="889.90692"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="${fg2}"
+     id="text78"
+     style="stroke-width:0.801718">${fg0}</text>
+  <rect
+     x="144.30923"
+     y="817.75232"
+     width="80.171799"
+     height="48.103077"
+     fill="${fg1}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect78" />
+  <text
+     x="144.30923"
+     y="877.88116"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="${fg1}"
+     id="text79"
+     style="stroke-width:0.801718">FG1 (Default)</text>
+  <text
+     x="144.30923"
+     y="889.90692"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="${fg2}"
+     id="text80"
+     style="stroke-width:0.801718">${fg1}</text>
+  <rect
+     x="248.53256"
+     y="817.75232"
+     width="80.171799"
+     height="48.103077"
+     fill="${fg2}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect80" />
+  <text
+     x="248.53256"
+     y="877.88116"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="${fg1}"
+     id="text81"
+     style="stroke-width:0.801718">FG2 (Darker)</text>
+  <text
+     x="248.53256"
+     y="889.90692"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="${fg2}"
+     id="text82"
+     style="stroke-width:0.801718">${fg2}</text>
+  <rect
+     x="352.75592"
+     y="817.75232"
+     width="80.171799"
+     height="48.103077"
+     fill="${fg3}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect82" />
+  <text
+     x="352.75592"
+     y="877.88116"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="${fg1}"
+     id="text83"
+     style="stroke-width:0.801718">FG3 (Darker)</text>
+  <text
+     x="352.75592"
+     y="889.90692"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="${fg2}"
+     id="text84"
+     style="stroke-width:0.801718">${fg3}</text>
+  <!-- Selection Colors Section -->
+  <text
+     x="40.085899"
+     y="929.99286"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="12.8275px"
+     font-weight="bold"
+     fill="${fg0}"
+     id="text85"
+     style="stroke-width:0.801718">Selection Colors</text>
+  <!-- SEL0-1 -->
+  <rect
+     x="40.085899"
+     y="946.02722"
+     width="96.206154"
+     height="48.103077"
+     fill="${sel0}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect85" />
+  <text
+     x="40.085899"
+     y="1006.1561"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="${fg1}"
+     id="text86"
+     style="stroke-width:0.801718">SEL0 (Popup BG)</text>
+  <text
+     x="40.085899"
+     y="1018.1818"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="${fg2}"
+     id="text87"
+     style="stroke-width:0.801718">${sel0}</text>
+  <rect
+     x="160.3436"
+     y="946.02722"
+     width="96.206154"
+     height="48.103077"
+     fill="${sel1}"
+     stroke="${bg1}"
+     stroke-width="1.60344"
+     id="rect87" />
+  <text
+     x="160.3436"
+     y="1006.1561"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="9.62062px"
+     fill="${fg1}"
+     id="text88"
+     style="stroke-width:0.801718">SEL1 (Search BG)</text>
+  <text
+     x="160.3436"
+     y="1018.1818"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="${fg2}"
+     id="text89"
+     style="stroke-width:0.801718">${sel1}</text>
+  <!-- Usage Legend -->
+  <text
+     x="40.085899"
+     y="1066.2849"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="12.8275px"
+     font-weight="bold"
+     fill="${fg0}"
+     id="text90"
+     style="stroke-width:0.801718">Usage Notes</text>
+  <text
+     x="40.085899"
+     y="1086.3279"
+     font-family="Consolas, Monaco, 'Courier New', monospace"
+     font-size="8.01718px"
+     fill="${fg2}"
+     id="text91"
+     style="stroke-width:0.801718">• Each main color has 3 shades: Base (middle), Bright (lighter), Dim (darker)</text>
+</svg>
+]===]
+
+  return template.parse_template_str(content, spec)
+end
+
+return M

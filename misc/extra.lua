@@ -28,6 +28,8 @@ local extras = {
   konsole = "colorscheme",
   nushell = { ext = "nu", use_spec_name = true },
   starship = "toml",
+  svg_palette = { ext = "svg", suffix = "palette", use_spec_name = true },
+  svg_usage = { ext = "svg", suffix="usage", use_spec_name = true },
   tmux = { ext = "tmux", use_spec_name = true },
   wezterm = "toml",
   windows_terminal = "json",
@@ -51,7 +53,8 @@ for extra_name, extra in pairs(extras) do
     for spec_name, spec in pairs(specs) do
       local folder = join("extra", spec_name)
       local ext = is_table and extra.ext or extra
-      local filename = (is_table and extra.use_spec_name) and fmt("%s.%s", spec_name, ext)
+      local filename = (is_table and extra.suffix and extra.use_spec_name) and fmt("%s_%s.%s", spec_name, extra.suffix, ext)
+        or (is_table and extra.use_spec_name) and fmt("%s.%s", spec_name, ext)
         or fmt("%s.%s", extra_name, ext)
 
       spec.palette.meta.url = fmt("https://github.com/edeneast/nightfox.nvim/raw/main/%s/%s", folder, filename)
