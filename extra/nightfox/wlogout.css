@@ -1,0 +1,128 @@
+/**
+ * Nightfox theme for wlogout
+ * name: nightfox
+ * upstream: https://github.com/edeneast/nightfox.nvim/raw/main/extra/nightfox/wlogout.css
+ */
+
+* {
+    background-image: none;
+}
+
+window {
+    font-family: "JetBrains Mono", "Fira Code", monospace, sans-serif;
+    font-size: 14pt;
+    font-weight: 500;
+    color: #aeafb0; /* subtext */
+    background-color: #131a24f2; /* mantle with opacity */
+}
+
+button {
+    background-repeat: no-repeat;
+    background-position: center 35%;
+    background-size: 25%;
+    border: 2px solid #29394f; /* overlay0 */
+    border-radius: 12px;
+    background-color: #212e3f; /* surface1 */
+    margin: 5px;
+    padding: 20px;
+    min-width: 160px;
+    min-height: 80px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-shadow: none;
+    -gtk-icon-shadow: none;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:hover {
+    background-color: #2b3b51; /* surface2 */
+    border-color: #39506d; /* overlay1 */
+    color: #cdcecf; /* text */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+button:focus {
+    background-color: #2b3b51;
+    color: #cdcecf;
+}
+
+/* Individual button accent colors on hover */
+#lock:hover {
+    border-color: #719cd6; /* blue */
+}
+
+#lock:focus {
+    border-color: #719cd6;
+}
+
+#logout:hover {
+    border-color: #dbc074; /* yellow */
+}
+
+#logout:focus {
+    border-color: #dbc074;
+}
+
+#suspend:hover {
+    border-color: #9d79d6; /* magenta */
+}
+
+#suspend:focus {
+    border-color: #9d79d6;
+}
+
+#reboot:hover {
+    border-color: #f4a261; /* orange */
+}
+
+#reboot:focus {
+    border-color: #f4a261;
+}
+
+#shutdown:hover {
+    border-color: #c94f6d; /* red */
+}
+
+#shutdown:focus {
+    border-color: #c94f6d;
+}
+
+/* Button images - user should provide their own */
+#lock {
+    background-image: image(url("./lock.png"));
+}
+#lock:hover,
+#lock:focus {
+    background-image: image(url("./lock-hover.png"));
+}
+
+#logout {
+    background-image: image(url("./logout.png"));
+}
+#logout:hover,
+#logout:focus {
+    background-image: image(url("./logout-hover.png"));
+}
+
+#suspend {
+    background-image: image(url("./suspend.png"));
+}
+#suspend:hover,
+#suspend:focus {
+    background-image: image(url("./suspend-hover.png"));
+}
+
+#reboot {
+    background-image: image(url("./reboot.png"));
+}
+#reboot:hover,
+#reboot:focus {
+    background-image: image(url("./reboot-hover.png"));
+}
+
+#shutdown {
+    background-image: image(url("./shutdown.png"));
+}
+#shutdown:hover,
+#shutdown:focus {
+    background-image: image(url("./shutdown-hover.png"));
+}

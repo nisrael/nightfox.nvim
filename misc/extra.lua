@@ -22,18 +22,27 @@ local extras = {
   base16 = "yaml",
   bat = { ext = "tmTheme", use_spec_name = true },
   fish = { ext = "fish", use_spec_name = true },
+  foot = "ini",
+  fuzzel = "ini",
   ghostty = { ext = "ghostty", use_spec_name = true },
   iterm = { ext = "itermcolors", use_spec_name = true },
   kitty = "conf",
   konsole = "colorscheme",
   nushell = { ext = "nu", use_spec_name = true },
+  rofi = "rasi",
   starship = "toml",
   svg_palette = { ext = "svg", suffix = "palette", use_spec_name = true },
   svg_usage = { ext = "svg", suffix="usage", use_spec_name = true },
+  sway = "conf",
+  swaylock = "conf",
+  swaync = "css",
   tmux = { ext = "tmux", use_spec_name = true },
+  waybar = "css",
   wezterm = "toml",
   windows_terminal = "json",
+  wlogout = "css",
   xresources = { ext = "Xresources", use_spec_name = true },
+  yazi = { ext = "toml", basename = "flavor", subfolder = ".yazi" },
   warp = "yaml",
   zellij = { ext = "kdl", basename = "nightfox", is_full = true },
 }
@@ -51,10 +60,13 @@ for extra_name, extra in pairs(extras) do
     write(mod.generate(specs, { url = url }), folder, filename)
   else
     for spec_name, spec in pairs(specs) do
-      local folder = join("extra", spec_name)
+      local folder = (is_table and extra.subfolder)
+        and join("extra", spec_name, spec_name .. extra.subfolder)
+        or join("extra", spec_name)
       local ext = is_table and extra.ext or extra
       local filename = (is_table and extra.suffix and extra.use_spec_name) and fmt("%s_%s.%s", spec_name, extra.suffix, ext)
         or (is_table and extra.use_spec_name) and fmt("%s.%s", spec_name, ext)
+        or (is_table and extra.basename) and fmt("%s.%s", extra.basename, ext)
         or fmt("%s.%s", extra_name, ext)
 
       spec.palette.meta.url = fmt("https://github.com/edeneast/nightfox.nvim/raw/main/%s/%s", folder, filename)

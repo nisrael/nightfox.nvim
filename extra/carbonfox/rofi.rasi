@@ -1,0 +1,133 @@
+/**
+ * Nightfox theme for rofi
+ * name: carbonfox
+ * upstream: https://github.com/edeneast/nightfox.nvim/raw/main/extra/carbonfox/rofi.rasi
+ */
+
+* {
+    /* Color palette */
+    bg0:     #0c0c0c;
+    bg1:     #161616;
+    bg2:     #252525;
+    bg3:     #353535;
+    bg4:     #535353;
+
+    fg0:     #f9fbff;
+    fg1:     #f2f4f8;
+    fg2:     #b6b8bb;
+    fg3:     #7b7c7e;
+
+    sel0:    #2a2a2a;
+    sel1:    #525253;
+
+    red:     #ee5396;
+    green:   #25be6a;
+    yellow:  #08bdba;
+    blue:    #78a9ff;
+    magenta: #be95ff;
+    cyan:    #33b1ff;
+    orange:  #3ddbd9;
+    pink:    #ff7eb6;
+
+    /* Apply colors with transparency */
+    background-color: #161616e6;
+    border-color:     #78a9ffcc;
+    text-color:       @fg0;
+
+    spacing: 0;
+    margin: 0;
+}
+
+window {
+    background-color: @background-color;
+    border:           3px;
+    border-color:     @border-color;
+    border-radius:    6px;
+    padding:          20px;
+    width:            32%;
+}
+
+mainbox {
+    spacing: 8px;
+    children: [ inputbar, listview ];
+}
+
+inputbar {
+    spacing: 8px;
+    padding: 0px 0px 8px 0px;
+    children: [ prompt, entry ];
+}
+
+prompt {
+    text-color: @blue;
+    vertical-align: 0.5;
+}
+
+entry {
+    placeholder:       "Type to filter...";
+    placeholder-color: @fg3;
+    text-color:        @fg0;
+}
+
+listview {
+    lines: 16;
+    spacing: 2px;
+    scrollbar: false;
+}
+
+element {
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color:       @fg0;
+}
+
+element normal.active {
+    background-color: transparent;
+    text-color:       @cyan;
+}
+
+element normal.urgent {
+    background-color: transparent;
+    text-color:       @red;
+}
+
+element selected.normal {
+    background-color: #2a2a2af2;
+    text-color:       @fg0;
+}
+
+element selected.active {
+    background-color: #2a2a2af2;
+    text-color:       @cyan;
+}
+
+element selected.urgent {
+    background-color: #2a2a2af2;
+    text-color:       @red;
+}
+
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+    vertical-align:   0.5;
+}
+
+element-icon {
+    background-color: inherit;
+    size:             1.5em;
+    padding:          0px 8px 0px 0px;
+}
+
+message {
+    padding: 8px;
+    border-radius: 4px;
+    background-color: @bg3;
+}
+
+textbox {
+    text-color: @fg0;
+}
