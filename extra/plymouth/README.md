@@ -21,6 +21,20 @@ them from the system `spinner` theme. Those frames are light-colored, so the
 light foxes (`dayfox`, `dawnfox`) get a low-contrast spinner — the watermark
 and progress bar still theme correctly.
 
+## Layout
+
+Modeled on the upstream spinner theme, but with the logo promoted from a
+small bottom watermark to a centered emblem. Top to bottom:
+
+- Nightfox logo — watermark at 32% down, rasterized at 210&nbsp;px
+  (override with `WATERMARK_PX=<n> sudo ./install.sh …`; ~420 suits 4K+)
+- password entry — LUKS unlock / login, box at 55% down; two-step draws the
+  prompt text and keyboard hints *below* the box
+- spinner — 76% down
+
+The box sits just below center with the logo clear above it and the spinner
+clear below, so nothing overlaps during disk unlock at any common resolution.
+
 ## Install
 
 ```sh

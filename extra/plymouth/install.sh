@@ -42,16 +42,18 @@ DEST_DIR="$THEMES_DIR/$THEME_NAME"
   exit 1
 }
 
+WATERMARK_PX="${WATERMARK_PX:-210}"
+
 rasterize() {
-  local svg="$1" png="$2"
+  local svg="$1" png="$2" px="$WATERMARK_PX"
   if command -v rsvg-convert >/dev/null 2>&1; then
-    rsvg-convert -w 320 -h 320 -o "$png" "$svg"
+    rsvg-convert -w "$px" -h "$px" -o "$png" "$svg"
   elif command -v magick >/dev/null 2>&1; then
-    magick -background none "$svg" -resize 320x320 "$png"
+    magick -background none "$svg" -resize "${px}x${px}" "$png"
   elif command -v convert >/dev/null 2>&1; then
-    convert -background none "$svg" -resize 320x320 "$png"
+    convert -background none "$svg" -resize "${px}x${px}" "$png"
   elif command -v inkscape >/dev/null 2>&1; then
-    inkscape "$svg" --export-type=png --export-filename="$png" -w 320 -h 320 >/dev/null
+    inkscape "$svg" --export-type=png --export-filename="$png" -w "$px" -h "$px" >/dev/null
   else
     echo "error: need rsvg-convert, magick, convert or inkscape to rasterize the watermark" >&2
     exit 1
@@ -72,7 +74,8 @@ shopt -u nullglob
 install -m 0644 "$CONF" "$DEST_DIR/$THEME_NAME.plymouth"
 rasterize "$WATERMARK_SVG" "$DEST_DIR/watermark.png"
 
-echo "installed '$THEME_NAME' -> $DEST_DIR"
+echo "installed '$THEME_NAME' -> $DEST_DIR (logo ${WATERMARK_PX}px)"
+echo "  on a 4K+ display the logo may look small; re-run with e.g. WATERMARK_PX=420"
 echo
 echo "activate it with:"
 echo "  sudo plymouth-set-default-theme -R $THEME_NAME"

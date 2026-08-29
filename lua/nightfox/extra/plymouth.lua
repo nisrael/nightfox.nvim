@@ -24,8 +24,8 @@ function M.generate(spec, _)
 # name: ${palette.meta.name}
 # upstream: ${palette.meta.url}
 #
-# Based on the `spinner` theme (ModuleName=two-step). The distribution
-# watermark is replaced by the Nightfox logo. Install with
+# Based on the upstream `spinner` theme (the two-step splash plugin). The
+# distribution watermark is replaced by the Nightfox logo. Install with
 # `extra/plymouth/install.sh ${palette.meta.name}`.
 
 [Plymouth Theme]
@@ -38,14 +38,19 @@ Font=Cantarell 12
 TitleFont=Cantarell Light 30
 ImageDir=/usr/share/plymouth/themes/${theme_name}
 
-DialogHorizontalAlignment=.5
-DialogVerticalAlignment=.382
-TitleHorizontalAlignment=.5
-TitleVerticalAlignment=.382
-HorizontalAlignment=.5
-VerticalAlignment=.7
+# Layout, top to bottom: the Nightfox logo (watermark), then the password
+# entry (LUKS unlock / login), then the spinner. The plugin draws the prompt
+# text and keyboard hints below the entry box, so the box sits just below
+# center with the logo clear above it and the spinner clear below.
 WatermarkHorizontalAlignment=.5
-WatermarkVerticalAlignment=.45
+WatermarkVerticalAlignment=.32
+DialogHorizontalAlignment=.5
+DialogVerticalAlignment=.55
+TitleHorizontalAlignment=.5
+TitleVerticalAlignment=.55
+HorizontalAlignment=.5
+VerticalAlignment=.76
+MessageBelowAnimation=true
 
 Transition=none
 TransitionDuration=0.0
@@ -55,27 +60,36 @@ BackgroundEndColor=${bg1}
 ProgressBarBackgroundColor=${bg3}
 ProgressBarForegroundColor=${palette.blue}
 
+[boot-up]
+UseEndAnimation=false
+
+[shutdown]
+UseEndAnimation=false
+
+[reboot]
+UseEndAnimation=false
+
 [updates]
 SuppressMessages=true
 ProgressBarShowPercentComplete=true
 UseProgressBar=true
-_Title=Installing Updates...
-_SubTitle=Do not turn off your computer
+Title=Installing Updates...
+SubTitle=Do not turn off your computer
 
 [system-upgrade]
 SuppressMessages=true
 ProgressBarShowPercentComplete=true
 UseProgressBar=true
-_Title=Upgrading System...
-_SubTitle=Do not turn off your computer
+Title=Upgrading System...
+SubTitle=Do not turn off your computer
 
 [firmware-upgrade]
 SuppressMessages=true
 ProgressBarShowPercentComplete=true
 UseProgressBar=true
 UseFirmwareBackground=true
-_Title=Upgrading Firmware...
-_SubTitle=Do not turn off your computer
+Title=Upgrading Firmware...
+SubTitle=Do not turn off your computer
 ]]
 
   content = template.parse_template_str(content, spec)

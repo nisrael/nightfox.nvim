@@ -2,8 +2,8 @@
 # name: dawnfox
 # upstream: https://github.com/edeneast/nightfox.nvim/raw/main/extra/dawnfox/dawnfox.plymouth
 #
-# Based on the `spinner` theme (ModuleName=two-step). The distribution
-# watermark is replaced by the Nightfox logo. Install with
+# Based on the upstream `spinner` theme (the two-step splash plugin). The
+# distribution watermark is replaced by the Nightfox logo. Install with
 # `extra/plymouth/install.sh dawnfox`.
 
 [Plymouth Theme]
@@ -16,14 +16,19 @@ Font=Cantarell 12
 TitleFont=Cantarell Light 30
 ImageDir=/usr/share/plymouth/themes/nightfox-dawnfox
 
-DialogHorizontalAlignment=.5
-DialogVerticalAlignment=.382
-TitleHorizontalAlignment=.5
-TitleVerticalAlignment=.382
-HorizontalAlignment=.5
-VerticalAlignment=.7
+# Layout, top to bottom: the Nightfox logo (watermark), then the password
+# entry (LUKS unlock / login), then the spinner. The plugin draws the prompt
+# text and keyboard hints below the entry box, so the box sits just below
+# center with the logo clear above it and the spinner clear below.
 WatermarkHorizontalAlignment=.5
-WatermarkVerticalAlignment=.45
+WatermarkVerticalAlignment=.32
+DialogHorizontalAlignment=.5
+DialogVerticalAlignment=.55
+TitleHorizontalAlignment=.5
+TitleVerticalAlignment=.55
+HorizontalAlignment=.5
+VerticalAlignment=.76
+MessageBelowAnimation=true
 
 Transition=none
 TransitionDuration=0.0
@@ -33,24 +38,33 @@ BackgroundEndColor=0xfaf4ed
 ProgressBarBackgroundColor=0xebdfe4
 ProgressBarForegroundColor=0x286983
 
+[boot-up]
+UseEndAnimation=false
+
+[shutdown]
+UseEndAnimation=false
+
+[reboot]
+UseEndAnimation=false
+
 [updates]
 SuppressMessages=true
 ProgressBarShowPercentComplete=true
 UseProgressBar=true
-_Title=Installing Updates...
-_SubTitle=Do not turn off your computer
+Title=Installing Updates...
+SubTitle=Do not turn off your computer
 
 [system-upgrade]
 SuppressMessages=true
 ProgressBarShowPercentComplete=true
 UseProgressBar=true
-_Title=Upgrading System...
-_SubTitle=Do not turn off your computer
+Title=Upgrading System...
+SubTitle=Do not turn off your computer
 
 [firmware-upgrade]
 SuppressMessages=true
 ProgressBarShowPercentComplete=true
 UseProgressBar=true
 UseFirmwareBackground=true
-_Title=Upgrading Firmware...
-_SubTitle=Do not turn off your computer
+Title=Upgrading Firmware...
+SubTitle=Do not turn off your computer
