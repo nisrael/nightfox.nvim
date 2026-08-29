@@ -31,6 +31,8 @@ local extras = {
   konsole = "colorscheme",
   noctalia = { ext = "json", use_spec_name = true },
   nushell = { ext = "nu", use_spec_name = true },
+  plymouth = { ext = "plymouth", use_spec_name = true },
+  plymouth_watermark = { ext = "svg", suffix = "plymouth_watermark", use_spec_name = true },
   rofi = "rasi",
   starship = "toml",
   svg_palette = { ext = "svg", suffix = "palette", use_spec_name = true },
