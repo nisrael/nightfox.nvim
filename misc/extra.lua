@@ -21,6 +21,7 @@ local extras = {
   alacritty = "toml",
   base16 = "yaml",
   bat = { ext = "tmTheme", use_spec_name = true },
+  dgop = "json",
   fish = { ext = "fish", use_spec_name = true },
   foot = "ini",
   fuzzel = "ini",

@@ -615,6 +615,7 @@ map <F2> <cmd>call SynStack()<cr>
 There are [extra](./extra) configuration files for the following:
 
 - [alacritty](https://github.com/alacritty/alacritty)
+- [dgop](https://danklinux.com/docs/dgop/configuration)
 - [fish](https://fishshell.com/)
 - [iterm](https://iterm2.com/index.html)
 - [kitty](https://sw.kovidgoyal.net/kitty/overview/#configuring-kitty)
