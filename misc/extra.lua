@@ -29,6 +29,7 @@ local extras = {
   iterm = { ext = "itermcolors", use_spec_name = true },
   kitty = "conf",
   konsole = "colorscheme",
+  ly = "ini",
   noctalia = { ext = "json", use_spec_name = true },
   nushell = { ext = "nu", use_spec_name = true },
   plymouth = { ext = "plymouth", use_spec_name = true },

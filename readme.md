@@ -620,6 +620,7 @@ There are [extra](./extra) configuration files for the following:
 - [iterm](https://iterm2.com/index.html)
 - [kitty](https://sw.kovidgoyal.net/kitty/overview/#configuring-kitty)
 - [konsole](https://konsole.kde.org/)
+- [ly](https://github.com/fairyglade/ly)
 - [noctalia](https://github.com/noctalia-dev/noctalia)
 - [plymouth](https://www.freedesktop.org/wiki/Software/Plymouth/) (see [extra/plymouth](./extra/plymouth))
 - [starship](https://starship.rs/)
