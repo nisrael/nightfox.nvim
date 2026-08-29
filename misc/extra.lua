@@ -30,6 +30,7 @@ local extras = {
   kitty = "conf",
   konsole = "colorscheme",
   ly = "ini",
+  ly_startup = { ext = "sh", basename = "ly-startup" },
   noctalia = { ext = "json", use_spec_name = true },
   nushell = { ext = "nu", use_spec_name = true },
   plymouth = { ext = "plymouth", use_spec_name = true },
