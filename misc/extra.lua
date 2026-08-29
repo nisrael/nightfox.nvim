@@ -28,6 +28,7 @@ local extras = {
   iterm = { ext = "itermcolors", use_spec_name = true },
   kitty = "conf",
   konsole = "colorscheme",
+  noctalia = { ext = "json", use_spec_name = true },
   nushell = { ext = "nu", use_spec_name = true },
   rofi = "rasi",
   starship = "toml",
@@ -70,7 +71,10 @@ for extra_name, extra in pairs(extras) do
         or fmt("%s.%s", extra_name, ext)
 
       spec.palette.meta.url = fmt("https://github.com/edeneast/nightfox.nvim/raw/main/%s/%s", folder, filename)
-      write(mod.generate(spec, {}), folder, filename)
+      local content = mod.generate(spec, {})
+      if content then
+        write(content, folder, filename)
+      end
     end
   end
 end
